@@ -1,0 +1,217 @@
+.App {
+  height:  100vh;
+}
+
+body {
+  background: linear-gradient(to top, #001a33, #003366, #004080, #0059b3, #0066cc);
+  height: 100vh; /* Ensure full viewport height */
+  margin: 0; /* Remove default body margin */
+}
+
+
+/* Basic button style */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+/* Enabled state */
+.btn.enabled {
+  background-color: #007bff; /* Blue background color */
+  color: #fff; /* White text color */
+  border: 2px solid #007bff; /* Blue border */
+}
+
+/* Disabled state */
+.btn.disabled {
+  background-color: #ccc; /* Light gray background color for disabled */
+  color: #888; /* Gray text color for disabled */
+  border: 2px solid #ccc; /* Light gray border for disabled */
+  cursor: not-allowed; /* Change cursor to indicate disabled state */
+}
+
+/* Hover effect for enabled buttons */
+.btn.enabled:hover {
+  background-color: #0056b3; /* Darker blue on hover for enabled */
+}
+
+
+/* Star-like celestial object */
+.point {
+  background-color: #fffff0; /* Pale yellow color */
+  height: 10px; /* Adjust the size as needed */
+  width: 10px; /* Adjust the size as needed */
+  border-radius: 50%;
+  position: absolute;
+  margin: -10px; /* Adjust the margin as needed */
+  animation: twinkle 2s ease-in-out infinite; /* Twinkling animation */
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0.5; /* Start with slightly lower opacity */
+    transform: scale(1); /* Start with regular size */
+  }
+  50% {
+    opacity: 1; /* Peak opacity for twinkling effect */
+    transform: scale(1.2); /* Slightly larger size at peak */
+  }
+  100% {
+    opacity: 0.5; /* Return to slightly lower opacity */
+    transform: scale(1); /* Return to regular size */
+  }
+}
+/* Updated styles.css */
+
+/* Updated styles.css for shark-like appearance */
+
+.fish { 
+  height: 5px;
+  width: 5px;
+  position: absolute;
+  animation: swim 4s linear infinite;
+  transform: scaleX(-1); /* Flip the fish horizontally */
+  z-index: 1; /* Ensure fish appear above the water */
+}
+
+/* Updated @keyframes for shark animation */
+
+@keyframes swim {
+  0% {
+    transform: translateX(0) scaleX(1) rotateY(0deg);
+  }
+  49.9% {
+    transform: translateX(200px) scaleX(1) rotateY(0deg);
+  }
+  50% {
+    transform: translateX(200px) scaleX(1) rotateY(180deg);
+  }
+  99.9% {
+    transform: translateX(0) scaleX(1) rotateY(180deg);
+  }
+  100% {
+    transform: translateX(0) scaleX(1) rotateY(0deg);
+  }
+}
+
+
+.sky {
+  background-color:#adf;
+  
+}
+
+
+@keyframes bubbleAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#bubbles {
+  position: absolute;
+  width: 2vmin;
+  height: 2vmin;
+  left: 80px;
+  top : -50px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.4);
+  box-shadow: -2vmin -1.25vmin 0 -0.5vmin rgba(255,255,255,0.3), -0.75vmin -2.75vmin 0 -0.25vmin rgba(255,255,255,0.5);
+  /* Apply the animation */
+  animation: bubbleAnimation 2s ease-in-out infinite;
+  z-index: 1;
+}
+@keyframes bubbleAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+#shark {
+  width: 30vmin;
+  height: 10vmin;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#shark div {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.shark-body {
+  left: 0vmin;
+  width: 30vmin;
+  height: 20vmin;
+  background: red;
+  border-radius: 50%;
+  transform: translate(0, -50%);
+  clip-path: polygon(0% 50%, 100% 50%, 100% 90%, 70% 70%, 90% 100%, 0% 100%);
+  background: #aaa;
+}
+
+.shark-eye {
+  width: 1.5vmin;
+  height: 1.5vmin;
+  border-radius: 50%;
+  background: white;
+  box-shadow: inset -0.2vmin -0.45vmin 0 0.6vmin;
+  top: 1.5vmin;
+  right: 4vmin;
+}
+
+.aleta, .tail, .fin {
+  width: 10vmin;
+  height: 8vmin;
+  box-shadow: 4vmin -0.5vmin #aaa;
+  border-radius: 50%;
+  top: -1vmin;
+  transform: translate(-130%, -3vmin) rotate(10deg);
+}
+
+.aleta {
+  box-shadow: 5vmin 0vmin #999;
+  top: 5vmin;
+  left: 3vmin;
+  transform: none;
+  clip-path: polygon(0% 50%, 200% 40%, 200% 100%, 0% 100%);
+}
+
+.fin {
+  box-shadow: 5vmin 0vmin #aaa;
+  left: 15vmin;
+}
+
+.gill {
+  width: 6vmin;
+  height: 9vmin;
+  border-radius: 100%;
+  box-shadow: -2vmin 0 0 -1.7vmin rgba(0,0,0,0.25);
+  left: 18.5vmin;
+}
+
+.gill-2 {
+  transform: translate(-1vmin, 0) scale(0.9);
+}
+
+.gill-3 {
+  transform: translate(-2vmin, 0) scale(0.8);
+}
