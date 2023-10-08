@@ -2,7 +2,7 @@
 
 Ocean Shark Spawner is a simple web application developed using CSS and React JS with TypeScript. It allows you to practice your front-end development skills in a fun and interactive way. Create an underwater world and spawn sharks with a click!
 
-[![Demo Video](https://img.youtube.com/vi/lZ4QQOY_CbQ/0.jpg)](https://youtu.be/lZ4QQOY_CbQ)
+[![Demo Video](https://img.youtube.com/vi/lZ4QQOY_CbQ/10.jpg)](https://youtu.be/lZ4QQOY_CbQ)
 
 Watch the [demo video](https://youtu.be/lZ4QQOY_CbQ) to see Ocean Shark Spawner in action.
 
